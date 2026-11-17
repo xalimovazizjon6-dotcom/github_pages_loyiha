@@ -1,8 +1,9 @@
-const btn = document.getElementById('greetBtn');
-const msg = document.getElementById('message');
+const themeBtn = document.getElementById('themeBtn');
+let isPurple = false;
 
-btn.addEventListener('click', () => {
-  const vaqt = new Date().toLocaleTimeString('uz-UZ');
-  msg.textContent = `Assalomu alaykum! Sayt GitHub Pages’da faol ishlamoqda (${vaqt}).`;
-  msg.classList.remove('hidden');
+themeBtn.addEventListener('click', () => {
+  isPurple = !isPurple;
+  document.body.style.background = isPurple
+    ? 'linear-gradient(135deg, #2e1065, #4c1d95)'
+    : 'linear-gradient(135deg, #0f172a, #1e293b)';
 });
